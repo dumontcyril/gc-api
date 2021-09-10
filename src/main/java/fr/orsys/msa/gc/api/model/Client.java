@@ -19,6 +19,8 @@ public class Client {
 
     @JsonProperty(value="first_name")
     private String firstname;
+
+    @JsonProperty(value="address")
     private String address;
     private String city;
     private String zipCode;
