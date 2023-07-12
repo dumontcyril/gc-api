@@ -7,3 +7,32 @@ spring:
   h2:
     console:
       enabled: true
+
+management:
+  server:
+    port: 8081
+  info:
+    env:
+      enabled: true
+    os:
+      enabled: true
+    java:
+      enabled: true
+    build:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: "always"
+
+
+info:
+  app: '@project.artifactId@'
+  version: '@project.version@'
+  java:
+    version: ${java.version}
+  bdd: ${spring.datasource.url}
