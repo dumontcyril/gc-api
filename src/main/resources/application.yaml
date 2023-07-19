@@ -3,14 +3,16 @@ spring:
     enabled: true
 
   datasource:
-    url: jdbc:h2:C:/sandbox/gc-data
+    #url: jdbc:h2:C:/sandbox/gc-data
+    url: jdbc:mysql://${app.bdd.host}/${app.bdd.schema}
+
   h2:
     console:
       enabled: true
 
 management:
-  server:
-    port: 8081
+  #server:
+  #  port: 8081
   info:
     env:
       enabled: true
